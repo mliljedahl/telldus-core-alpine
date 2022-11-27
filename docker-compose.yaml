@@ -1,0 +1,10 @@
+version: "3"
+services:
+  telldus-core-alpine:
+    image: mliljedahl/telldus-core-alpine
+    container_name: telldus-core-alpine
+    restart: unless-stopped
+    devices:
+      - /dev/bus/usb:/dev/bus/usb:rwm
+    volumes:
+      - ./tellstick.conf:/etc/tellstick.conf:ro
