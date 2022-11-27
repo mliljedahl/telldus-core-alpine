@@ -7,4 +7,4 @@ services:
     devices:
       - /dev/bus/usb:/dev/bus/usb:rwm
     volumes:
-      - ./tellstick.conf:/etc/tellstick.conf:ro
+      - ./data/tellstick.conf:/etc/tellstick.conf:ro

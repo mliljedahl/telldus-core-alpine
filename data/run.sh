@@ -12,8 +12,8 @@ if [ -e /tmp/TelldusEvents ]; then
     rm /tmp/TelldusEvents
 fi
 
-if [ ! -f /etc/telldus.conf ]; then
-    echo "Configuration file '/etc/telldus.conf' is missing, please refer"
+if [ ! -f /etc/tellstick.conf ]; then
+    echo "Configuration file '/etc/tellstick.conf' is missing, please refer"
     echo "to the documentation on how to mount the configuration file."
     echo ""
     echo "https://github.com/mliljedahl/telldus-core-alpine/README.md"

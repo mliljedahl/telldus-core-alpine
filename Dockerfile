@@ -28,7 +28,7 @@ RUN apk add --no-cache --virtual .build-dependencies \
     && apk del .build-dependencies \
     && rm -rf /usr/src/telldus
 
-COPY run.sh .
+COPY data/run.sh .
 
 EXPOSE 50800-50801
 
