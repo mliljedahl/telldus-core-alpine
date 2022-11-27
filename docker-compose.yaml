@@ -8,3 +8,6 @@ services:
       - /dev/bus/usb:/dev/bus/usb:rwm
     volumes:
       - ./data/tellstick.conf:/etc/tellstick.conf:ro
+    ports:
+      - "50800:50800"
+      - "50801:50801"

@@ -5,7 +5,7 @@
 
 ## Installation
 
-Best option is to run the `docker-compose.yaml` file.
+The recommended way for running the image is to include it to your existing docker-compose.yml file so only linked containers can talk to it.
 
 ### Docker Compose
 
@@ -20,9 +20,26 @@ Here is an example using docker-compose.yml:
       - /dev/bus/usb:/dev/bus/usb:rwm
     volumes:
       - ./data/tellstick.conf:/etc/tellstick.conf:ro
+    expose:
+      - "50800"
+      - "50801"
 ```
 
-Running docker compose
+### Home Assistant
+
+Here is the config that needs to be added or changed in `configuration.yaml` for home-assistant:
+
+```
+# Example configuration.yaml entry with the TellStick add-on
+tellstick:
+  host: telldus-core-alpine
+  port: [50800, 50801]
+```
+
+### Easy installation
+
+Easiest option is to run the `docker-compose.yaml` file. **This is far from recommended** because the telldusd ports (50800-50801) will be exposed to the host network (0.0.0.0). 
+
 ```
 $ docker-compose up -d
 ```
