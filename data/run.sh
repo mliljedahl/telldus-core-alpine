@@ -16,7 +16,7 @@ if [ ! -f /etc/tellstick.conf ]; then
     echo "Configuration file '/etc/tellstick.conf' is missing, please refer"
     echo "to the documentation on how to mount the configuration file."
     echo ""
-    echo "https://github.com/mliljedahl/telldus-core-alpine/README.md"
+    echo "https://github.com/mliljedahl/telldus-core-alpine/blob/master/README.md"
     exit 1
 fi
 
