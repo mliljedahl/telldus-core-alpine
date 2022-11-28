@@ -3,6 +3,8 @@
 ![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/mliljedahl/telldus-core-alpine)
 ![Docker Pulls](https://img.shields.io/docker/pulls/mliljedahl/telldus-core-alpine)
 
+Docker image running Alpine Linux that provides a telldusd interface to be used to communicate with your tellstick.
+
 ## Installation
 
 The recommended way for running the image is to include it to your existing `docker-compose.yaml` file so only linked containers can talk to it.
