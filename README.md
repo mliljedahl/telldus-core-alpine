@@ -15,7 +15,7 @@ Here is an example using docker-compose:
 
 ```
   telldus-core-alpine:
-    image: mliljedahl/telldus-core-alpine:1.0.1
+    image: mliljedahl/telldus-core-alpine:1.0.2
     container_name: telldus-core-alpine
     restart: unless-stopped
     devices:
@@ -38,7 +38,7 @@ $ docker-compose up -d
 ### Docker run
 
 ```
-$ docker run --name telldus-core-alpine -v ./data/tellstick.conf:/etc/tellstick.conf:ro --device=/dev/bus/usb:/dev/bus/usb:rwm -d mliljedahl/telldus-core-alpine:1.0.1
+$ docker run --name telldus-core-alpine -v ./data/tellstick.conf:/etc/tellstick.conf:ro --device=/dev/bus/usb:/dev/bus/usb:rwm -d mliljedahl/telldus-core-alpine:1.0.2
 ```
 
 ## Home Assistant
