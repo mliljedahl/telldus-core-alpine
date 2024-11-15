@@ -2,19 +2,23 @@ name: Docker Image CI
 
 on:
   push:
+    paths-ignore:
+      - '**.yaml'
+      - '**.md'
+      - 'LICENSE'
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
       with:
         submodules: true
+
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag telldus-core-alpine:$(date +%s)
+      run: docker build . --file Dockerfile --tag ${{ vars.CONTAINER_NAME}}:$(date +%s)
