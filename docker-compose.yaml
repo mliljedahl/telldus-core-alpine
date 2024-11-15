@@ -1,7 +1,7 @@
 version: "3"
 services:
   telldus-core-alpine:
-    image: mliljedahl/telldus-core-alpine:1.0.1
+    image: mliljedahl/telldus-core-alpine:1.0.2
     container_name: telldus-core-alpine
     restart: unless-stopped
     devices:
