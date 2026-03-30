@@ -1,4 +1,3 @@
-version: "3"
 services:
   telldus-core-alpine:
     image: mliljedahl/telldus-core-alpine:1.1.0

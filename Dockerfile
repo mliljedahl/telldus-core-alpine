@@ -1,5 +1,7 @@
 FROM alpine:3.23
 
+RUN apk update && apk upgrade
+
 # Compile telldus-core source
 WORKDIR /usr/src/
 
