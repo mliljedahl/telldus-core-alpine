@@ -1,4 +1,4 @@
-FROM alpine:3.20
+FROM alpine:3.23
 
 # Compile telldus-core source
 WORKDIR /usr/src/
